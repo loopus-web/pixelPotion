@@ -58,23 +58,53 @@ This command will install dependencies for the root, client, and server director
 
 ### Environment Setup
 
+#### Configuration Templates
+The project includes example environment files with placeholder values:
+- `client/example.env` - Frontend configuration template
+- `server/example.env` - Backend configuration template
+
 #### Server Environment Variables
-Create a `.env` file in the `server` directory:
+Copy the example file and update with your actual values:
+```bash
+cd server
+cp example.env .env
+```
+
+Edit the `.env` file with your configuration:
 ```env
-MONGODB_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret_key
-SUPABASE_URL=your_supabase_url
-SUPABASE_ANON_KEY=your_supabase_anon_key
 PORT=5000
+MONGODB_URI=mongodb://localhost:27017/your_database_name
+JWT_SECRET=your_jwt_secret_key_replace_in_production
+NODE_ENV=development
 ```
 
 #### Client Environment Variables
-Create a `.env` file in the `client` directory:
-```env
-VITE_SUPABASE_URL=your_supabase_url
-VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
-VITE_API_BASE_URL=http://localhost:5000
+Copy the example file and update with your actual values:
+```bash
+cd client
+cp example.env .env
 ```
+
+Edit the `.env` file with your configuration:
+```env
+# Configuration AuthKit (WorkOS)
+VITE_AUTHKIT_CLIENT_ID=client_your_client_id_here
+VITE_AUTHKIT_ORGANIZATION_ID=org_your_organization_id_here
+VITE_AUTHKIT_API_URL=https://api.workos.com
+
+# Configuration Supabase
+VITE_SUPABASE_URL=https://your-project-id.supabase.co
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key_here
+
+# URL de l'API Backend
+VITE_API_URL=http://localhost:5000/api
+
+# Paramètres optionnels
+VITE_ENABLE_ANALYTICS=false
+VITE_DEBUG_MODE=false
+```
+
+⚠️ **Important**: Never commit your actual `.env` files to version control. The `example.env` files are provided as templates with placeholder values.
 
 ## 🏃‍♂️ Running the Application
 
