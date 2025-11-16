@@ -418,23 +418,30 @@ function Header() {
           >
             Home
           </NavLink>
-          <NavLink 
-            to="/generator" 
+          <NavLink
+            to="/generator"
             active={location.pathname === '/generator' ? 1 : 0}
             onClick={handleLinkClick}
           >
             Generator
           </NavLink>
-          {/* <NavLink 
-            to="/marketplace" 
+          <NavLink
+            to="/tools"
+            active={location.pathname.startsWith('/tools') ? 1 : 0}
+            onClick={handleLinkClick}
+          >
+            Tools
+          </NavLink>
+          <NavLink
+            to="/marketplace"
             active={location.pathname === '/marketplace' ? 1 : 0}
             onClick={handleLinkClick}
           >
             Marketplace
-          </NavLink> */}
+          </NavLink>
           {user && (
-            <NavLink 
-              to="/gallery" 
+            <NavLink
+              to="/gallery"
               active={location.pathname === '/gallery' ? 1 : 0}
               onClick={handleLinkClick}
             >
