@@ -210,7 +210,10 @@ const plans = [
       'Basic styles only (Simple, Retro)',
       'Maximum 256x256 resolution',
       'Save up to 50 images in gallery',
-      'Basic priority in queue'
+      'Sprite Sheet Generator',
+      'Animation Creator',
+      'Color Palette Manager',
+      'Basic export formats'
     ],
     recommended: false
   },
@@ -226,7 +229,11 @@ const plans = [
       'All pixel art styles',
       'Up to 512x512 resolution',
       'Save up to 1000 images in gallery',
-      'Email support'
+      'Tileset Generator with auto-tiling',
+      'Batch Generator (up to 10 variations)',
+      'Advanced export (Godot, Unity, Tiled)',
+      'Marketplace selling (30% commission)',
+      'Priority email support'
     ],
     recommended: true
   },
@@ -242,7 +249,12 @@ const plans = [
       'All pixel art styles plus exclusives',
       'Up to 512x512 resolution',
       'Save up to 5000 images in gallery',
-      'Email support'
+      'Batch Generator (up to 20 variations)',
+      'Premium Asset Packs access',
+      'API access for integrations',
+      'Commercial licensing',
+      'Marketplace selling (20% commission)',
+      'Priority support + Discord access'
     ],
     recommended: false
   }
@@ -260,19 +272,43 @@ const featuresComparison = [
     name: 'Max Resolution',
     free: '256x256',
     pro: '512x512',
-    ultimate: 'Custom'
+    ultimate: '512x512'
   },
   {
     name: 'Styles Available',
     free: '2',
-    pro: '6',
-    ultimate: '10+'
+    pro: '10+',
+    ultimate: '15+ Exclusive'
+  },
+  {
+    name: 'Sprite Sheet Generator',
+    free: '✓',
+    pro: '✓',
+    ultimate: '✓'
+  },
+  {
+    name: 'Animation Creator',
+    free: '✓',
+    pro: '✓',
+    ultimate: '✓'
+  },
+  {
+    name: 'Tileset Generator',
+    free: '✗',
+    pro: '✓',
+    ultimate: '✓'
+  },
+  {
+    name: 'Batch Generator',
+    free: '✗',
+    pro: '10 variations',
+    ultimate: '20 variations'
   },
   {
     name: 'Export Formats',
     free: 'PNG',
-    pro: 'PNG, GIF',
-    ultimate: 'PNG, GIF, SVG'
+    pro: 'PNG, GIF, JSON',
+    ultimate: 'All + SVG + Engine Formats'
   },
   {
     name: 'Gallery Storage',
@@ -281,10 +317,22 @@ const featuresComparison = [
     ultimate: '5000 Images'
   },
   {
+    name: 'Marketplace',
+    free: 'View Only',
+    pro: 'Sell (30% fee)',
+    ultimate: 'Sell (20% fee)'
+  },
+  {
+    name: 'API Access',
+    free: '✗',
+    pro: '✗',
+    ultimate: '✓'
+  },
+  {
     name: 'Priority Support',
     free: 'No',
     pro: 'Email',
-    ultimate: 'Email'
+    ultimate: 'Email + Discord'
   }
 ];
 

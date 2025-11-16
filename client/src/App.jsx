@@ -18,6 +18,14 @@ import ContactPage from './pages/ContactPage';
 import PaymentSuccessPage from './pages/PaymentSuccessPage';
 import StripeRedirect from './pages/StripeRedirect';
 import LandingPage from './pages/LandingPage';
+import ToolsPage from './pages/ToolsPage';
+
+// Tool Components
+import SpriteSheetGenerator from './components/spritesheet/SpriteSheetGenerator';
+import AnimationCreator from './components/animation/AnimationCreator';
+import TileSetGenerator from './components/tileset/TileSetGenerator';
+import ColorPaletteManager from './components/palette/ColorPaletteManager';
+import BatchGenerator from './components/batch/BatchGenerator';
 
 // Components
 import Header from './components/layout/Header'
@@ -99,6 +107,22 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/privacy" element={<PrivacyPage />} />
           <Route path="/terms" element={<TermsPage />} />
+
+          {/* Tools */}
+          <Route path="/tools" element={<ToolsPage />} />
+          <Route path="/tools/spritesheet" element={<SpriteSheetGenerator />} />
+          <Route path="/tools/animation" element={<AnimationCreator />} />
+          <Route path="/tools/tileset" element={
+            <ProtectedRoute>
+              <TileSetGenerator />
+            </ProtectedRoute>
+          } />
+          <Route path="/tools/palette" element={<ColorPaletteManager />} />
+          <Route path="/tools/batch" element={
+            <ProtectedRoute>
+              <BatchGenerator />
+            </ProtectedRoute>
+          } />
         </Routes>
       </MainContent>
       <Footer />
